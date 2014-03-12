@@ -5,6 +5,8 @@ This is a attempt to create a mini static blogger with Ruby.
 
 For [Markdown](http://daringfireball.net/projects/markdown/) and [Guard](https://github.com/guard/guard).
 
+Guard version: [Guardfile](https://github.com/ranmocy/simplest-blogger/blob/master/Guardfile)
+
 ## Philosophy
 
 1. Hackable
