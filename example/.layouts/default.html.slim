@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title = title || "Ranmocy's Garden"
+    meta charset="utf-8"
+    meta name="author" content="Wanzhang Sheng"
+    meta name="description" content="My land, my rule."
+    == stylesheet_link_tag "default"
+    == javascript_include_tag  "default"
+  body class="typo"
+    nav
+      span.logo == link_to title || "Ranmocy's Garden", "/"
+      span.date = created_at && created_at.strftime('%b %d %Y')
+      span.link
+        == link_to "Blog", "/blog.html"
+        == link_to "About", "/about.html"
+    article == yield

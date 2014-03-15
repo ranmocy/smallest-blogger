@@ -10,6 +10,8 @@ Powered by
 
 Guard version: [Guardfile](https://github.com/ranmocy/smallest-blogger/blob/master/Guardfile)
 
+Example: [example/](https://github.com/ranmocy/smallest-blogger/blob/master/example/)
+
 ## Philosophy
 
 1. Hackable
