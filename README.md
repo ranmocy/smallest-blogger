@@ -1,11 +1,14 @@
-Simplest Blogger
+Smallest Blogger
 ================
 
-This is a attempt to create a mini static blogger with Ruby.
+A minimal, extendable, static blogger with templates.
 
-For [Markdown](http://daringfireball.net/projects/markdown/) and [Guard](https://github.com/guard/guard).
+Powered by
+[Markdown](http://daringfireball.net/projects/markdown/)
+[SCSS](http://sass-lang.com/)
+[Guard](https://github.com/guard/guard).
 
-Guard version: [Guardfile](https://github.com/ranmocy/simplest-blogger/blob/master/Guardfile)
+Guard version: [Guardfile](https://github.com/ranmocy/smallest-blogger/blob/master/Guardfile)
 
 ## Philosophy
 
