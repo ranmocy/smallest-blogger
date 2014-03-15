@@ -77,7 +77,7 @@ class Scanner
       layouts[File.basename(file.src_path, ".html.slim")] = file
       layouts
     end
-    @@articles = scan(ARTICLE_PATH).sort_by { |a| a.meta['created-at'] }.reverse
+    @@articles = scan(ARTICLE_PATH).sort_by { |a| a.meta.created_at }.reverse
   end
 
   def self.method_missing(meth, *args, &blk)
@@ -91,6 +91,10 @@ class SlimEnv
   def initialize(file=nil)
     metaclass = class << self; self; end
     metaclass.send(:define_method, :current_page) { file }
+  end
+
+  def articles
+    Scanner.articles
   end
 
   def include(name, options = {}, &block)
@@ -122,7 +126,7 @@ class SlimEnv
   end
 
   def method_missing(meth, *args, &blk)
-    current_page.meta.send(meth.to_s)
+    current_page.meta.send(meth.to_s) # return nil if no method
   end
 
 end
@@ -173,7 +177,7 @@ class Generator
 
   def call(guard_class, event, *args)
     cleanup
-    Scanner.files.each do |file|
+    (Scanner.files + Scanner.articles).each do |file|
       cmd = "generate_#{file.ext[1..-1]}"
       if respond_to? cmd # I know how to deal with it
         puts "#{file.ext[1..-1].upcase}: #{file.url}"
