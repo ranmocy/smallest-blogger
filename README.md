@@ -21,6 +21,19 @@ guard
 ```
 Open in your browser [http://localhost:8080][localhost].
 
+## Post header
+
+We use YAML header for posts' meta information, as this:
+
+```yaml
+---
+title: Vim 公案
+created_at: 2013-09-12T18:14:55-07:00
+updated_at: 2013-09-12T18:34:04-07:00
+---
+
+```
+
 ## Guard version
 
 [Guardfile](https://github.com/ranmocy/smallest-blogger/blob/master/Guardfile)

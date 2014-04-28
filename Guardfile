@@ -45,11 +45,11 @@ class Scanner
 
     # read yaml header if possible
     begin
-      header       = file.content.match(/\A---\n(.*)\n---\n\n(.*)\Z/m)
-      file.meta    = Hashie::Mash.new header ? YAML.load(header[1]) : nil
-      file.content = header[2] if header # remove the header
-    rescue ArgumentError # images are not UTF-8
-      file.meta = Hashie::Mash.new
+      header       = file.content.match(/\A---\n(.*)\n---\n(.*)\Z/m)
+      file.meta    = Hashie::Mash.new(YAML.load(header[1]))
+      file.content = header[2] # remove the header
+    rescue Exception
+      file.meta = Hashie::Mash.new({title: File.basename(file_path, file.ext)})
     end
 
     # url
@@ -77,7 +77,7 @@ class Scanner
       layouts[File.basename(file.src_path, ".html.slim")] = file
       layouts
     end
-    @@articles = scan(ARTICLE_PATH).sort_by { |a| a.meta.created_at }.reverse
+    @@articles = scan(ARTICLE_PATH).sort_by { |a| a.meta.created_at || Time.now }.reverse
   end
 
   def self.method_missing(meth, *args, &blk)
