@@ -18,14 +18,14 @@ git clone "https://github.com/ranmocy/smallest-blogger.git"
 cd smallest-blogger/example
 bundle
 guard
-open "http://localhost:3000"
 ```
+Open in your browser [http://localhost:8080][localhost].
 
 ## Guard version
 
 [Guardfile](https://github.com/ranmocy/smallest-blogger/blob/master/Guardfile)
 will monitor on your current folder, generate new version when you save files.
-And create a server to preview on [http://localhost:3000](http://localhost:3000)
+And create a server to preview on [http://localhost:8080][localhost].
 
 Usage:
 ```bash
@@ -33,7 +33,6 @@ wget "https://raw.githubusercontent.com/ranmocy/smallest-blogger/master/Gemfile"
 bundle
 wget "https://raw.githubusercontent.com/ranmocy/smallest-blogger/master/Guardfile"
 guard
-open "http://localhost:3000"
 ```
 
 ## Rake version
@@ -65,3 +64,5 @@ TODO
 If you can make the base code smaller or clearer, please fork and make a pull request.
 
 If you can extend the functionality, I will put them to `examples/` and update *Howto* section.
+
+[localhost]: http://localhost:8080 (http://localhost:8080)
