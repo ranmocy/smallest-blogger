@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Smallest-blogger by ranmocy</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Smallest-blogger</h1>
+        <p>With Markdown and Guard</p>
+
+        <p class="view"><a href="https://github.com/ranmocy/smallest-blogger">View the Project on GitHub <small>ranmocy/smallest-blogger</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ranmocy/smallest-blogger/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ranmocy/smallest-blogger/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ranmocy/smallest-blogger">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="smallest-blogger" class="anchor" href="#smallest-blogger"><span class="octicon octicon-link"></span></a>Smallest Blogger</h1>
+
+<p>A minimal, extendable, static blogger with templates.</p>
+
+<p>Powered by
+<a href="http://daringfireball.net/projects/markdown/">Markdown</a>,
+<a href="http://sass-lang.com/">SCSS</a>,
+<a href="https://github.com/guard/guard">Guard</a>.</p>
+
+<h2>
+<a name="quick-example" class="anchor" href="#quick-example"><span class="octicon octicon-link"></span></a>Quick example</h2>
+
+<p>Example: <a href="https://github.com/ranmocy/smallest-blogger/blob/master/example/">example/</a></p>
+
+<p>Usage:</p>
+
+<div class="highlight highlight-bash"><pre>git clone <span class="s2">"https://github.com/ranmocy/smallest-blogger.git"</span>
+<span class="nb">cd </span>smallest-blogger/example
+bundle
+guard
+</pre></div>
+
+<p>Open in your browser <a href="http://localhost:8080" title="http://localhost:8080">http://localhost:8080</a>.</p>
+
+<h2>
+<a name="post-header" class="anchor" href="#post-header"><span class="octicon octicon-link"></span></a>Post header</h2>
+
+<p>We use YAML header for posts' meta information, as this:</p>
+
+<div class="highlight highlight-yaml"><pre><span class="nn">---</span>
+<span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Vim 公案</span>
+<span class="l-Scalar-Plain">created_at</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2013-09-12T18:14:55-07:00</span>
+<span class="l-Scalar-Plain">updated_at</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">2013-09-12T18:34:04-07:00</span>
+<span class="nn">---</span>
+
+</pre></div>
+
+<h2>
+<a name="guard-version" class="anchor" href="#guard-version"><span class="octicon octicon-link"></span></a>Guard version</h2>
+
+<p><a href="https://github.com/ranmocy/smallest-blogger/blob/master/Guardfile">Guardfile</a>
+will monitor on your current folder, generate new version when you save files.
+And create a server to preview on <a href="http://localhost:8080" title="http://localhost:8080">http://localhost:8080</a>.</p>
+
+<p>Usage:</p>
+
+<div class="highlight highlight-bash"><pre>wget <span class="s2">"https://raw.githubusercontent.com/ranmocy/smallest-blogger/master/Gemfile"</span>
+bundle
+wget <span class="s2">"https://raw.githubusercontent.com/ranmocy/smallest-blogger/master/Guardfile"</span>
+guard
+</pre></div>
+
+<h2>
+<a name="rake-version" class="anchor" href="#rake-version"><span class="octicon octicon-link"></span></a>Rake version</h2>
+
+<p><a href="https://github.com/ranmocy/smallest-blogger/blob/master/Rakefile">Rakefile</a></p>
+
+<p>Usage:</p>
+
+<div class="highlight highlight-bash"><pre>wget <span class="s2">"https://raw.githubusercontent.com/ranmocy/smallest-blogger/master/Gemfile"</span>
+bundle
+wget <span class="s2">"https://raw.githubusercontent.com/ranmocy/smallest-blogger/master/Rakefile"</span>
+rake generate <span class="c"># Only generate the site</span>
+rake update   <span class="c"># Only publish to remote by Git</span>
+rake publish  <span class="c"># Both generate the site and publish to remote by Git</span>
+</pre></div>
+
+<h2>
+<a name="howto" class="anchor" href="#howto"><span class="octicon octicon-link"></span></a>Howto</h2>
+
+<p>TODO</p>
+
+<h2>
+<a name="philosophy" class="anchor" href="#philosophy"><span class="octicon octicon-link"></span></a>Philosophy</h2>
+
+<ol>
+<li>Hackable</li>
+<li>Minimal</li>
+<li>Clear</li>
+</ol><h2>
+<a name="contribution" class="anchor" href="#contribution"><span class="octicon octicon-link"></span></a>Contribution</h2>
+
+<p>If you can make the base code smaller or clearer, please fork and make a pull request.</p>
+
+<p>If you can extend the functionality, I will put them to <code>examples/</code> and update <em>Howto</em> section.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ranmocy">ranmocy</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
